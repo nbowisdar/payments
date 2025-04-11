@@ -27,17 +27,17 @@ const Second = () => {
 					</h2>
 				</div>
 
-				<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+				<div className="flex flex-wrap gap-15 sm:grid-cols-2 lg:grid-cols-3 justify-center">
 					{data.map((item, index) => (
 						<div
 							key={index}
-							className="bg-gray-800 p-4 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500"
+							className="bg-gray-800 p-4 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500 max-w-[300px]"
 						>
 							<img src={item.image} alt="" />
 							<div className="flex text-start  mb-4">
-								<h3 className="ml-3 text-2xl font-bold ">{item.title}</h3>
+								<h3 className="ml-3 text-xl font-bold ">{item.title}</h3>
 							</div>
-							<p className="mt-2 ">{item.description}</p>
+							<p className="mt-1 text-md">{item.description}</p>
 						</div>
 					))}
 				</div>
