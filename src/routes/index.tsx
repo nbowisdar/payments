@@ -2,10 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Third } from "@/components/third";
 import Second from "@/components/second";
 import { First } from "@/components/first";
+import { Forth } from "@/components/forth"
+import Fifth from "@/components/fifth"
 
 export const Route = createFileRoute("/")({
 	component: App,
-});
+})
 
 function App() {
 	return (
@@ -13,11 +15,12 @@ function App() {
 			{/* <header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]"> */}
 			{/* </header> */}
 			<div>
-			<First/>
-			<Second/>
-			<Third/>
-
+				<First />
+				<Second />
+				<Third />
+				<Forth />
+				<Fifth />
 			</div>
 		</div>
-	);
+	)
 }
