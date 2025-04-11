@@ -19,10 +19,10 @@ const data = [
 
 const Second = () => {
 	return (
-		<div className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full ">
+		<div className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full bg-[url('')]">
 			<div className="mx-auto w-3/4">
 				<div className="mb-12">
-					<h2 className="text-3xl font-extrabold sm:text-4xl">
+					<h2 className="text-xl font-extrabold sm:text-2xl">
 						Global Payment Gateway. Covering the whole globe.
 					</h2>
 				</div>
