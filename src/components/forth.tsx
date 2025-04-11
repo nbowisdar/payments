@@ -38,7 +38,7 @@ export const Forth = () => {
 							{data.map((item, index) => (
 								<div
 									key={index}
-									className="border-4 border-orange-500 p-4 rounded-lg bg-gray-900 min-w-[200px] text-center"
+									className="border-2 border-orange-500 p-4 rounded-lg bg-gray-900 min-w-[200px] text-center"
 								>
 									<p className="text-xl mb-2">
 										{item.number}

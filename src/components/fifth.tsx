@@ -1,6 +1,6 @@
 const Fifth = () => {
 	return (
-		<main className="min-h-screen max-w-3/4 min-w-96 text-white m-auto">
+		<main className="min-h-screen max-w-5/10 min-w-96 text-white m-auto">
 			<div className="container mx-auto px-4 py-8">
 				{/* Header */}
 				<div className="text-center mb-10">
