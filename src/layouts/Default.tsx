@@ -1,7 +1,11 @@
-import React from 'react';
+import type { ReactNode } from "react"
 
-const DefaultLayout = ({ children }) => {
-  return (
+interface DefaultLayoutProps {
+	children: ReactNode
+}
+
+const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
+	return (
 		<div className="min-h-screen bg-gray-800 text-white">
 			{/* This container centers all content with max-width and padding */}
 			<div className="mx-auto ">
@@ -12,6 +16,6 @@ const DefaultLayout = ({ children }) => {
 			</div>
 		</div>
 	)
-};
+}
 
-export default DefaultLayout;
+export default DefaultLayout

@@ -1,27 +1,24 @@
-import React from 'react';
-
-
 const data = [
-    {
-        title: "24/7 Technical support",
-        description: "Our team of experts is always on standby to assist you with any questions.",
-        image: "https://www.globalpayapp.net/img/unique1.png",
-    },
-    {
-        title: "Quick Integration Time.",
-        description: "User-friendly and high speed integration process..",
-        image: "https://www.globalpayapp.net/img/unique2.png",
-    },
-    {
-        title: "Cosmopolitan approach.",
-        description: "We welcome all currencies",
-        image: "https://www.globalpayapp.net/img/unique3.png",
-    },
-
+	{
+		title: "24/7 Technical support",
+		description:
+			"Our team of experts is always on standby to assist you with any questions.",
+		image: "https://www.globalpayapp.net/img/unique1.png",
+	},
+	{
+		title: "Quick Integration Time.",
+		description: "User-friendly and high speed integration process..",
+		image: "https://www.globalpayapp.net/img/unique2.png",
+	},
+	{
+		title: "Cosmopolitan approach.",
+		description: "We welcome all currencies",
+		image: "https://www.globalpayapp.net/img/unique3.png",
+	},
 ]
 
 const Second = () => {
-  return (
+	return (
 		<div className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full ">
 			<div className="mx-auto w-3/4">
 				<div className="mb-12">
@@ -53,6 +50,6 @@ const Second = () => {
 			</div>
 		</div>
 	)
-};
+}
 
-export default Second;
+export default Second
