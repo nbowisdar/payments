@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router"
 import { motion } from "framer-motion"
 
 const Footer = () => {
@@ -43,22 +44,20 @@ const Footer = () => {
 						className="text-center flex justify-evenly text-orange-400 mt-4"
 						variants={item}
 					>
-						<motion.a
+						<Link
 							className="block hover:text-orange-300"
-							href="/payments/terms-conditions"
+							to="/payments/terms-conditions"
 							target="_blank"
-							whileHover={{ scale: 1.1 }}
 						>
 							Terms
-						</motion.a>
-						<motion.a
+						</Link>
+						<Link
 							className="block hover:text-orange-300"
-							href="/payments/privacy-policy"
+							to="/payments/privacy-policy"
 							target="_blank"
-							whileHover={{ scale: 1.1 }}
 						>
 							Privacy
-						</motion.a>
+						</Link>
 					</motion.div>
 				</motion.div>
 				<motion.p
