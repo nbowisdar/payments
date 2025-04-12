@@ -12,7 +12,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
 			<div className="mx-auto ">
 				{/* This centers content vertically and horizontally */}
 				<div className="min-h-screen flex flex-col items-center justify-center">
-					<main className="flex-grow w-full">{children}</main>
+					<main className="min-h-screen flex-grow w-full">{children}</main>
 					<Footer />
 				</div>
 			</div>

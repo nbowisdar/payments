@@ -1,5 +1,6 @@
+import { motion } from "framer-motion"
+
 const PaymentMethodsSlider = () => {
-	// Array of payment method data
 	const paymentMethods = [
 		{
 			id: 1,
@@ -23,23 +24,63 @@ const PaymentMethodsSlider = () => {
 		},
 	]
 
+	// Animation variants
+	const container = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.1,
+				delayChildren: 0.3,
+			},
+		},
+	}
+
+	const item = {
+		hidden: { x: -50, opacity: 0 },
+		visible: {
+			x: 0,
+			opacity: 1,
+			transition: {
+				type: "spring",
+				stiffness: 100,
+				damping: 10,
+			},
+		},
+		hover: {
+			scale: 1.1,
+			transition: { type: "spring", stiffness: 400, damping: 10 },
+		},
+	}
+
 	return (
-		<div className="flex gap-4 justify-evenly items-center pb-7">
+		<motion.div
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, margin: "-50px" }}
+			variants={container}
+			className="flex gap-4 justify-evenly items-center pb-7 flex-wrap"
+		>
 			{paymentMethods.map((method, index) => (
-				<div
+				<motion.div
 					key={method.id}
-					className="flex-shrink-0 mx-4 "
+					variants={item}
+					whileHover="hover"
+					className="flex-shrink-0 mx-4"
 					role="listitem"
 					aria-label={`${index + 1} / ${paymentMethods.length}`}
+					style={{ minWidth: "80px" }} // Ensures consistent sizing
 				>
-					<img
+					<motion.img
 						src={method.imgSrc}
 						alt={method.alt}
 						className="w-full h-auto object-contain"
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.9 }}
 					/>
-				</div>
+				</motion.div>
 			))}
-		</div>
+		</motion.div>
 	)
 }
 

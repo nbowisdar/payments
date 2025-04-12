@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 const data = [
 	{
 		title: "24/7 Technical support",
@@ -18,37 +20,87 @@ const data = [
 ]
 
 const Second = () => {
+	// Animation variants
+	const container = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.2,
+			},
+		},
+	}
+
+	const item = {
+		hidden: { y: 50, opacity: 0 },
+		visible: {
+			y: 0,
+			opacity: 1,
+			transition: {
+				type: "spring",
+				stiffness: 100,
+				damping: 10,
+			},
+		},
+	}
+
 	return (
-		<div className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full bg-[url('')]">
+		<motion.div
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ once: true, margin: "-100px" }}
+			className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full"
+		>
 			<div className="mx-auto w-3/4">
-				<div className="mb-12">
+				{/* Title */}
+				<motion.div variants={item} className="mb-12">
 					<h2 className="text-xl font-extrabold sm:text-2xl">
 						Global Payment Gateway. Covering the whole globe.
 					</h2>
-				</div>
+				</motion.div>
 
-				<div className="flex flex-wrap gap-15 sm:grid-cols-2 lg:grid-cols-3 justify-center">
+				{/* Cards */}
+				<motion.div
+					variants={container}
+					className="flex flex-wrap gap-8 justify-center"
+				>
 					{data.map((item, index) => (
-						<div
+						<motion.div
 							key={index}
-							className="bg-gray-800 p-4 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500 max-w-[300px]"
+							whileHover={{ y: -5 }}
+							className="bg-gray-800 p-6 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500 max-w-[300px]"
 						>
-							<img src={item.image} alt="" />
-							<div className="flex text-start  mb-4">
-								<h3 className="ml-3 text-xl font-bold ">{item.title}</h3>
+							<motion.img
+								src={item.image}
+								alt={item.title}
+								initial={{ scale: 0.9 }}
+								whileInView={{ scale: 1 }}
+								viewport={{ once: true }}
+								transition={{ type: "spring", delay: 0.2 }}
+							/>
+							<div className="flex text-start mb-4 mt-4">
+								<h3 className="ml-3 text-xl font-bold">{item.title}</h3>
 							</div>
 							<p className="mt-1 text-md">{item.description}</p>
-						</div>
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 
-				<div className="mt-12 text-center">
-					<button className="text-2xl border-2 border-orange-500 hover:cursor-pointer px-11 py-1 rounded-md">
+				{/* Button */}
+				<motion.div variants={item} className="mt-12 text-center">
+					<motion.button
+						whileHover={{
+							scale: 1.05,
+							backgroundColor: "rgba(249, 115, 22, 0.1)",
+						}}
+						whileTap={{ scale: 0.95 }}
+						className="text-2xl border-2 border-orange-500 hover:cursor-pointer px-11 py-1 rounded-md"
+					>
 						Join us
-					</button>
-				</div>
+					</motion.button>
+				</motion.div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
