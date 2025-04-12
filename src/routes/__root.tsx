@@ -1,4 +1,3 @@
-import Footer from "@/components/fotter"
 import DefaultLayout from "@/layouts/Default"
 import { Outlet, createRootRoute } from "@tanstack/react-router"
 
@@ -7,7 +6,6 @@ export const Route = createRootRoute({
 		<>
 			<DefaultLayout>
 				<Outlet />
-				<Footer />
 			</DefaultLayout>
 		</>
 	),
