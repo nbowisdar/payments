@@ -29,7 +29,7 @@ const Fifth = () => {
 					</div>
 					<div className="rounded-lg overflow-hidden">
 						<img
-							src="https://www.globalpayapp.net/img/advantages1.png"
+							src="/payments/img/advantages1.png"
 							alt="Person using mobile payment"
 							width={500}
 							height={400}
@@ -42,7 +42,7 @@ const Fifth = () => {
 				<div className="grid md:grid-cols-2 gap-6 mb-10">
 					<div className="rounded-lg overflow-hidden">
 						<img
-							src="https://www.globalpayapp.net/img/advantages2.png"
+							src="/payments/img/advantages2.png"
 							alt="Person using credit card"
 							width={500}
 							height={400}
@@ -82,7 +82,7 @@ const Fifth = () => {
 					</div>
 					<div className="rounded-lg overflow-hidden">
 						<img
-							src="https://www.globalpayapp.net/img/advantages3.png"
+							src="/payments/img/advantages3.png"
 							alt="Credit cards"
 							width={500}
 							height={400}
@@ -95,7 +95,7 @@ const Fifth = () => {
 				<div className="grid md:grid-cols-2 gap-6 mb-10">
 					<div className="rounded-lg overflow-hidden">
 						<img
-							src="https://www.globalpayapp.net/img/advantages4.png"
+							src="/payments/img/advantages4.png"
 							alt="Customer support team"
 							width={500}
 							height={400}

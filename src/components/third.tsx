@@ -7,23 +7,19 @@ export const Third = () => {
 				<li className="">
 					<img
 						className="m-auto"
-						src="https://www.globalpayapp.net/img/unique-secured.svg"
+						src="/payments/img/unique-secured.svg"
 						alt=""
 					/>
 					<h3 className="pt-4 max-w-[250px]">Secure and reliable Payments</h3>
 				</li>
 				<li className="">
-					<img
-						className="m-auto"
-						src="https://www.globalpayapp.net/img/unique-time.svg"
-						alt=""
-					/>
+					<img className="m-auto" src="/payments/img/unique-time.svg" alt="" />
 					<h3 className="pt-4 max-w-[250px]">Fast Integration Time Time</h3>
 				</li>
 				<div>
 					<img
 						className="m-auto"
-						src="https://www.globalpayapp.net/img/unique-suport.svg"
+						src="/payments/img/unique-suport.svg"
 						alt=""
 					/>
 					<h3 className="pt-4 max-w-[250px]">24/7 technical Support</h3>

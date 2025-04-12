@@ -3,17 +3,17 @@ const data = [
 		title: "24/7 Technical support",
 		description:
 			"Our team of experts is always on standby to assist you with any questions.",
-		image: "https://www.globalpayapp.net/img/unique1.png",
+		image: "/payments/img/unique1.png",
 	},
 	{
 		title: "Quick Integration Time.",
 		description: "User-friendly and high speed integration process..",
-		image: "https://www.globalpayapp.net/img/unique2.png",
+		image: "/payments/img/unique2.png",
 	},
 	{
 		title: "Cosmopolitan approach.",
 		description: "We welcome all currencies",
-		image: "https://www.globalpayapp.net/img/unique3.png",
+		image: "/payments/img/unique3.png",
 	},
 ]
 

@@ -24,7 +24,7 @@ const data = [
 
 export const Forth = () => {
     return (
-			<div className="bg-[url('https://www.globalpayapp.net/img/back-img.png')] bg-center bg-cover">
+			<div className="bg-[url('/payments/img/back-img.png')] bg-center bg-cover">
 				<p className="mt-8 pt-7 text-2xl font-bold">
 					Join millions getting secured payment
 				</p>

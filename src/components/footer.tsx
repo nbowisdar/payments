@@ -5,7 +5,7 @@ const Footer = () => {
 				<div>
 					<img
 						className="block"
-						src="https://www.globalpayapp.net/img/logo-bg.svg"
+						src="/payments/img/logo-bg.svg"
 						alt="Global Pay Logo"
 						width={200}
 					/>
@@ -32,30 +32,31 @@ const Footer = () => {
 						Contacts
 						<img
 							className="block w-8"
-							src="https://www.globalpayapp.net/img/email-icon.svg"
+							src="/payments/img/email-icon.svg"
 							alt=""
 						/>
 					</h3>
-						<p className="mt-2">Admin@globalpayapp.net</p>
+					<p className="mt-2">Admin@globalpayapp.net</p>
 				</div>
 				<div>
-        <h3 className="flex justify-between text-xl font-bold text-orange-400">
-        Location
-        <img
+					<h3 className="flex justify-between text-xl font-bold text-orange-400">
+						Location
+						<img
 							className="block w-6"
-							src="https://www.globalpayapp.net/img/map-icon.svg"
+							src="/payments/img/map-icon.svg"
 							alt=""
 						/>
 					</h3>
-						<p className="mt-2">20-22 WENLOCK ROAD,LONDON,,United Kingdom (the),N1 7GU</p>
+					<p className="mt-2">
+						20-22 WENLOCK ROAD,LONDON,,United Kingdom (the),N1 7GU
+					</p>
 				</div>
 				<div>
 					<h3 className="text-xl font-bold text-orange-400">License</h3>
+					<p className="mt-2">MSB registration number: M22944776</p>
 					<p className="mt-2">
-						MSB registration number: M22944776
+						Licensed by Ebanx technology LYD incorporation number: 14055475
 					</p>
-          <p className="mt-2">Licensed by Ebanx technology LYD
-          incorporation number: 14055475</p>
 				</div>
 			</div>
 
