@@ -1,4 +1,5 @@
 import Footer from "@/components/footer"
+import Header from "@/components/Header"
 import type { ReactNode } from "react"
 
 interface DefaultLayoutProps {
@@ -12,7 +13,8 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
 			<div className="mx-auto ">
 				{/* This centers content vertically and horizontally */}
 				<div className="min-h-screen flex flex-col items-center justify-center">
-					<main className="min-h-screen flex-grow w-full">{children}</main>
+					<Header />
+					<main className="min-h-[70vh] flex-grow w-full">{children}</main>
 					<Footer />
 				</div>
 			</div>

@@ -1,6 +1,5 @@
 import {
 	RouterProvider,
-	createMemoryHistory,
 	createRouter,
 } from "@tanstack/react-router"
 import { StrictMode } from "react"
@@ -22,9 +21,6 @@ const router = createRouter({
 	defaultPreloadStaleTime: 0,
 })
 
-// const memoryHistory = createMemoryHistory({
-// 	initialEntries: ["/"],
-// })
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
