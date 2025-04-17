@@ -15,6 +15,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as PaymentsIndexImport } from './routes/payments/index'
 import { Route as PaymentsTermsConditionsImport } from './routes/payments/terms-conditions'
 import { Route as PaymentsPrivacyPolicyImport } from './routes/payments/privacy-policy'
+import { Route as PaymentsPaymentImport } from './routes/payments/payment'
 import { Route as PaymentsGatewayApiImport } from './routes/payments/gateway-api'
 import { Route as PaymentsDocsImport } from './routes/payments/docs'
 
@@ -41,6 +42,12 @@ const PaymentsTermsConditionsRoute = PaymentsTermsConditionsImport.update({
 const PaymentsPrivacyPolicyRoute = PaymentsPrivacyPolicyImport.update({
   id: '/payments/privacy-policy',
   path: '/payments/privacy-policy',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PaymentsPaymentRoute = PaymentsPaymentImport.update({
+  id: '/payments/payment',
+  path: '/payments/payment',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -81,6 +88,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PaymentsGatewayApiImport
       parentRoute: typeof rootRoute
     }
+    '/payments/payment': {
+      id: '/payments/payment'
+      path: '/payments/payment'
+      fullPath: '/payments/payment'
+      preLoaderRoute: typeof PaymentsPaymentImport
+      parentRoute: typeof rootRoute
+    }
     '/payments/privacy-policy': {
       id: '/payments/privacy-policy'
       path: '/payments/privacy-policy'
@@ -111,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/payments/docs': typeof PaymentsDocsRoute
   '/payments/gateway-api': typeof PaymentsGatewayApiRoute
+  '/payments/payment': typeof PaymentsPaymentRoute
   '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
   '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
   '/payments': typeof PaymentsIndexRoute
@@ -120,6 +135,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/payments/docs': typeof PaymentsDocsRoute
   '/payments/gateway-api': typeof PaymentsGatewayApiRoute
+  '/payments/payment': typeof PaymentsPaymentRoute
   '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
   '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
   '/payments': typeof PaymentsIndexRoute
@@ -130,6 +146,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/payments/docs': typeof PaymentsDocsRoute
   '/payments/gateway-api': typeof PaymentsGatewayApiRoute
+  '/payments/payment': typeof PaymentsPaymentRoute
   '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
   '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
   '/payments/': typeof PaymentsIndexRoute
@@ -141,6 +158,7 @@ export interface FileRouteTypes {
     | '/'
     | '/payments/docs'
     | '/payments/gateway-api'
+    | '/payments/payment'
     | '/payments/privacy-policy'
     | '/payments/terms-conditions'
     | '/payments'
@@ -149,6 +167,7 @@ export interface FileRouteTypes {
     | '/'
     | '/payments/docs'
     | '/payments/gateway-api'
+    | '/payments/payment'
     | '/payments/privacy-policy'
     | '/payments/terms-conditions'
     | '/payments'
@@ -157,6 +176,7 @@ export interface FileRouteTypes {
     | '/'
     | '/payments/docs'
     | '/payments/gateway-api'
+    | '/payments/payment'
     | '/payments/privacy-policy'
     | '/payments/terms-conditions'
     | '/payments/'
@@ -167,6 +187,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PaymentsDocsRoute: typeof PaymentsDocsRoute
   PaymentsGatewayApiRoute: typeof PaymentsGatewayApiRoute
+  PaymentsPaymentRoute: typeof PaymentsPaymentRoute
   PaymentsPrivacyPolicyRoute: typeof PaymentsPrivacyPolicyRoute
   PaymentsTermsConditionsRoute: typeof PaymentsTermsConditionsRoute
   PaymentsIndexRoute: typeof PaymentsIndexRoute
@@ -176,6 +197,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PaymentsDocsRoute: PaymentsDocsRoute,
   PaymentsGatewayApiRoute: PaymentsGatewayApiRoute,
+  PaymentsPaymentRoute: PaymentsPaymentRoute,
   PaymentsPrivacyPolicyRoute: PaymentsPrivacyPolicyRoute,
   PaymentsTermsConditionsRoute: PaymentsTermsConditionsRoute,
   PaymentsIndexRoute: PaymentsIndexRoute,
@@ -194,6 +216,7 @@ export const routeTree = rootRoute
         "/",
         "/payments/docs",
         "/payments/gateway-api",
+        "/payments/payment",
         "/payments/privacy-policy",
         "/payments/terms-conditions",
         "/payments/"
@@ -207,6 +230,9 @@ export const routeTree = rootRoute
     },
     "/payments/gateway-api": {
       "filePath": "payments/gateway-api.tsx"
+    },
+    "/payments/payment": {
+      "filePath": "payments/payment.tsx"
     },
     "/payments/privacy-policy": {
       "filePath": "payments/privacy-policy.tsx"

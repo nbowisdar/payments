@@ -7,21 +7,18 @@ const navLinks = [
 	{ name: "Documentation", link: "/payments/docs" },
 	{ name: "Terms", link: "/payments/terms-conditions" },
 	{ name: "Privacy", link: "/payments/privacy-policy" },
+	{ name: "Payment", link: "/payments/payment" },
 ]
-
 
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	return (
-		<header className="shadow-sm">
+		<header className="shadow-sm sticky top-0 z-50 bg-gray-800">
 			<div className="px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center h-16 justify-between gap-15">
 					{/* Logo */}
 					<div className="">
-						<motion.div
-							whileHover={{ scale: 1.05 }}
-							className=""
-						>
+						<motion.div whileHover={{ scale: 1.05 }} className="">
 							<Link to="/payments" className="text-xl font-bold">
 								GlobalPay
 							</Link>
@@ -30,7 +27,7 @@ const Header = () => {
 
 					{/* Desktop Navigation */}
 					<nav className="hidden md:flex justify-center flex-1 space-x-8">
-						{navLinks.map(({name, link}) => (
+						{navLinks.map(({ name, link }) => (
 							<Link
 								key={name}
 								to={link}
