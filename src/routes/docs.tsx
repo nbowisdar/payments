@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 
-export const Route = createFileRoute('/payments/docs')({
+export const Route = createFileRoute('/docs')({
   component: RouteComponent,
 })
 
