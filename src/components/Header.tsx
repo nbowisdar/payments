@@ -4,10 +4,10 @@ import { useState } from "react"
 
 // Navigation data
 const navLinks = [
-	{ name: "Documentation", link: "/payments/docs" },
-	{ name: "Terms", link: "/payments/terms-conditions" },
-	{ name: "Privacy", link: "/payments/privacy-policy" },
-	{ name: "Payment", link: "/payments/payment" },
+	{ name: "Documentation", link: "/docs" },
+	{ name: "Terms", link: "/terms-conditions" },
+	{ name: "Privacy", link: "/privacy-policy" },
+	{ name: "Payment", link: "/payment" },
 ]
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 					{/* Logo */}
 					<div className="">
 						<motion.div whileHover={{ scale: 1.05 }} className="">
-							<Link to="/payments" className="text-xl font-bold">
+							<Link to="/" className="text-xl font-bold">
 								GlobalPay
 							</Link>
 						</motion.div>
@@ -77,13 +77,13 @@ const Header = () => {
 				>
 					<div className="pt-2 pb-3 space-y-1">
 						{navLinks.map((item) => (
-							<a
+							<Link
 								key={item.name}
-								href={item.link}
+								to={item.link}
 								className="block pl-3 pr-4 py-2 border-l-4 border-orange-500 bg-gray-900 text-base font-medium"
 							>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</div>
 				</motion.div>

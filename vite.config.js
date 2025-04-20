@@ -13,7 +13,7 @@ export default defineConfig({
 		viteReact(),
 		tailwindcss(),
 	],
-	base: "/payments",
+	base: "",
 	test: {
 		globals: true,
 		environment: "jsdom",

@@ -5,7 +5,7 @@ import { First } from "@/components/first"
 import { Forth } from "@/components/forth"
 import Fifth from "@/components/fifth"
 
-export const Route = createFileRoute("/payments/")({
+export const Route = createFileRoute("/")({
 	component: RouteComponent,
 })
 

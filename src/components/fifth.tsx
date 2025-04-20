@@ -89,7 +89,7 @@ const Fifth = () => {
 						className="rounded-lg overflow-hidden"
 					>
 						<img
-							src="/payments/img/advantages1.png"
+							src="/img/advantages1.png"
 							alt="Person using mobile payment"
 							width={500}
 							height={400}
@@ -111,7 +111,7 @@ const Fifth = () => {
 						className="rounded-lg overflow-hidden"
 					>
 						<img
-							src="/payments/img/advantages2.png"
+							src="/img/advantages2.png"
 							alt="Person using credit card"
 							width={500}
 							height={400}
@@ -178,7 +178,7 @@ const Fifth = () => {
 						className="rounded-lg overflow-hidden"
 					>
 						<img
-							src="/payments/img/advantages3.png"
+							src="/img/advantages3.png"
 							alt="Credit cards"
 							width={500}
 							height={400}
@@ -200,7 +200,7 @@ const Fifth = () => {
 						className="rounded-lg overflow-hidden"
 					>
 						<img
-							src="/payments/img/advantages4.png"
+							src="/img/advantages4.png"
 							alt="Customer support team"
 							width={500}
 							height={400}

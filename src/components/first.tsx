@@ -7,7 +7,7 @@ export const First = () => {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true }}
-			className="min-h-[40vh] flex flex-col justify-between bg-[url('/payments/img/heder-bg.png')] bg-center bg-cover"
+			className="min-h-[40vh] flex flex-col justify-between bg-[url('/img/heder-bg.png')] bg-center bg-cover"
 		>
 			{/* Logo with floating animation */}
 			<motion.div
@@ -29,7 +29,7 @@ export const First = () => {
 				}}
 			>
 				<motion.img
-					src="/payments/img/logo-bg.svg"
+					src="/img/logo-bg.svg"
 					alt="Global Pay Logo"
 					className="block"
 					width={200}

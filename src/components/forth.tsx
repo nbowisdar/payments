@@ -77,7 +77,7 @@ export const Forth = () => {
 			whileInView={{ opacity: 1 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.8 }}
-			className="bg-[url('/payments/img/back-img.png')] bg-center bg-cover"
+			className="bg-[url('/img/back-img.png')] bg-center bg-cover"
 		>
 			<motion.p
 				initial={{ y: 20 }}

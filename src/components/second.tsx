@@ -5,17 +5,17 @@ const data = [
 		title: "24/7 Technical support",
 		description:
 			"Our team of experts is always on standby to assist you with any questions.",
-		image: "/payments/img/unique1.png",
+		image: "/img/unique1.png",
 	},
 	{
 		title: "Quick Integration Time.",
 		description: "User-friendly and high speed integration process..",
-		image: "/payments/img/unique2.png",
+		image: "/img/unique2.png",
 	},
 	{
 		title: "Cosmopolitan approach.",
 		description: "We welcome all currencies",
-		image: "/payments/img/unique3.png",
+		image: "/img/unique3.png",
 	},
 ]
 

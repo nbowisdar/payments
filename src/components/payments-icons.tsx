@@ -4,22 +4,22 @@ const PaymentMethodsSlider = () => {
 	const paymentMethods = [
 		{
 			id: 1,
-			imgSrc: "/payments/img/visa%201.svg",
+			imgSrc: "/img/visa%201.svg",
 			alt: "Visa",
 		},
 		{
 			id: 2,
-			imgSrc: "/payments/img/logo-master%201.svg",
+			imgSrc: "/img/logo-master%201.svg",
 			alt: "Mastercard",
 		},
 		{
 			id: 3,
-			imgSrc: "/payments/img/visa%201.svg",
+			imgSrc: "/img/visa%201.svg",
 			alt: "Visa",
 		},
 		{
 			id: 4,
-			imgSrc: "/payments/img/logo-master%201.svg",
+			imgSrc: "/img/logo-master%201.svg",
 			alt: "Mastercard",
 		},
 	]

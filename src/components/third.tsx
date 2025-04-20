@@ -46,7 +46,7 @@ export const Third = () => {
 				<motion.li variants={itemVariants} className="text-center">
 					<motion.img
 						className="m-auto"
-						src="/payments/img/unique-secured.svg"
+						src="/img/unique-secured.svg"
 						alt="Secure payments icon"
 						whileHover={{ scale: 1.05 }} // Subtle hover effect
 					/>
@@ -59,7 +59,7 @@ export const Third = () => {
 				<motion.li variants={itemVariants} className="text-center">
 					<motion.img
 						className="m-auto"
-						src="/payments/img/unique-time.svg"
+						src="/img/unique-time.svg"
 						alt="Fast integration icon"
 						whileHover={{ scale: 1.05 }}
 					/>
@@ -72,7 +72,7 @@ export const Third = () => {
 				<motion.div variants={itemVariants} className="text-center">
 					<motion.img
 						className="m-auto"
-						src="/payments/img/unique-suport.svg"
+						src="/img/unique-suport.svg"
 						alt="Support icon"
 						whileHover={{ scale: 1.05 }}
 					/>

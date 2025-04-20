@@ -11,55 +11,48 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as TermsConditionsImport } from './routes/terms-conditions'
+import { Route as PrivacyPolicyImport } from './routes/privacy-policy'
+import { Route as PaymentImport } from './routes/payment'
+import { Route as GatewayApiImport } from './routes/gateway-api'
+import { Route as DocsImport } from './routes/docs'
 import { Route as IndexImport } from './routes/index'
-import { Route as PaymentsIndexImport } from './routes/payments/index'
-import { Route as PaymentsTermsConditionsImport } from './routes/payments/terms-conditions'
-import { Route as PaymentsPrivacyPolicyImport } from './routes/payments/privacy-policy'
-import { Route as PaymentsPaymentImport } from './routes/payments/payment'
-import { Route as PaymentsGatewayApiImport } from './routes/payments/gateway-api'
-import { Route as PaymentsDocsImport } from './routes/payments/docs'
 
 // Create/Update Routes
+
+const TermsConditionsRoute = TermsConditionsImport.update({
+  id: '/terms-conditions',
+  path: '/terms-conditions',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PrivacyPolicyRoute = PrivacyPolicyImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PaymentRoute = PaymentImport.update({
+  id: '/payment',
+  path: '/payment',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const GatewayApiRoute = GatewayApiImport.update({
+  id: '/gateway-api',
+  path: '/gateway-api',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const DocsRoute = DocsImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsIndexRoute = PaymentsIndexImport.update({
-  id: '/payments/',
-  path: '/payments/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsTermsConditionsRoute = PaymentsTermsConditionsImport.update({
-  id: '/payments/terms-conditions',
-  path: '/payments/terms-conditions',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsPrivacyPolicyRoute = PaymentsPrivacyPolicyImport.update({
-  id: '/payments/privacy-policy',
-  path: '/payments/privacy-policy',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsPaymentRoute = PaymentsPaymentImport.update({
-  id: '/payments/payment',
-  path: '/payments/payment',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsGatewayApiRoute = PaymentsGatewayApiImport.update({
-  id: '/payments/gateway-api',
-  path: '/payments/gateway-api',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const PaymentsDocsRoute = PaymentsDocsImport.update({
-  id: '/payments/docs',
-  path: '/payments/docs',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -74,46 +67,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/payments/docs': {
-      id: '/payments/docs'
-      path: '/payments/docs'
-      fullPath: '/payments/docs'
-      preLoaderRoute: typeof PaymentsDocsImport
+    '/docs': {
+      id: '/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof DocsImport
       parentRoute: typeof rootRoute
     }
-    '/payments/gateway-api': {
-      id: '/payments/gateway-api'
-      path: '/payments/gateway-api'
-      fullPath: '/payments/gateway-api'
-      preLoaderRoute: typeof PaymentsGatewayApiImport
+    '/gateway-api': {
+      id: '/gateway-api'
+      path: '/gateway-api'
+      fullPath: '/gateway-api'
+      preLoaderRoute: typeof GatewayApiImport
       parentRoute: typeof rootRoute
     }
-    '/payments/payment': {
-      id: '/payments/payment'
-      path: '/payments/payment'
-      fullPath: '/payments/payment'
-      preLoaderRoute: typeof PaymentsPaymentImport
+    '/payment': {
+      id: '/payment'
+      path: '/payment'
+      fullPath: '/payment'
+      preLoaderRoute: typeof PaymentImport
       parentRoute: typeof rootRoute
     }
-    '/payments/privacy-policy': {
-      id: '/payments/privacy-policy'
-      path: '/payments/privacy-policy'
-      fullPath: '/payments/privacy-policy'
-      preLoaderRoute: typeof PaymentsPrivacyPolicyImport
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyImport
       parentRoute: typeof rootRoute
     }
-    '/payments/terms-conditions': {
-      id: '/payments/terms-conditions'
-      path: '/payments/terms-conditions'
-      fullPath: '/payments/terms-conditions'
-      preLoaderRoute: typeof PaymentsTermsConditionsImport
-      parentRoute: typeof rootRoute
-    }
-    '/payments/': {
-      id: '/payments/'
-      path: '/payments'
-      fullPath: '/payments'
-      preLoaderRoute: typeof PaymentsIndexImport
+    '/terms-conditions': {
+      id: '/terms-conditions'
+      path: '/terms-conditions'
+      fullPath: '/terms-conditions'
+      preLoaderRoute: typeof TermsConditionsImport
       parentRoute: typeof rootRoute
     }
   }
@@ -123,84 +109,76 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/payments/docs': typeof PaymentsDocsRoute
-  '/payments/gateway-api': typeof PaymentsGatewayApiRoute
-  '/payments/payment': typeof PaymentsPaymentRoute
-  '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
-  '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
-  '/payments': typeof PaymentsIndexRoute
+  '/docs': typeof DocsRoute
+  '/gateway-api': typeof GatewayApiRoute
+  '/payment': typeof PaymentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-conditions': typeof TermsConditionsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/payments/docs': typeof PaymentsDocsRoute
-  '/payments/gateway-api': typeof PaymentsGatewayApiRoute
-  '/payments/payment': typeof PaymentsPaymentRoute
-  '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
-  '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
-  '/payments': typeof PaymentsIndexRoute
+  '/docs': typeof DocsRoute
+  '/gateway-api': typeof GatewayApiRoute
+  '/payment': typeof PaymentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-conditions': typeof TermsConditionsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/payments/docs': typeof PaymentsDocsRoute
-  '/payments/gateway-api': typeof PaymentsGatewayApiRoute
-  '/payments/payment': typeof PaymentsPaymentRoute
-  '/payments/privacy-policy': typeof PaymentsPrivacyPolicyRoute
-  '/payments/terms-conditions': typeof PaymentsTermsConditionsRoute
-  '/payments/': typeof PaymentsIndexRoute
+  '/docs': typeof DocsRoute
+  '/gateway-api': typeof GatewayApiRoute
+  '/payment': typeof PaymentRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/terms-conditions': typeof TermsConditionsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/payments/docs'
-    | '/payments/gateway-api'
-    | '/payments/payment'
-    | '/payments/privacy-policy'
-    | '/payments/terms-conditions'
-    | '/payments'
+    | '/docs'
+    | '/gateway-api'
+    | '/payment'
+    | '/privacy-policy'
+    | '/terms-conditions'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/payments/docs'
-    | '/payments/gateway-api'
-    | '/payments/payment'
-    | '/payments/privacy-policy'
-    | '/payments/terms-conditions'
-    | '/payments'
+    | '/docs'
+    | '/gateway-api'
+    | '/payment'
+    | '/privacy-policy'
+    | '/terms-conditions'
   id:
     | '__root__'
     | '/'
-    | '/payments/docs'
-    | '/payments/gateway-api'
-    | '/payments/payment'
-    | '/payments/privacy-policy'
-    | '/payments/terms-conditions'
-    | '/payments/'
+    | '/docs'
+    | '/gateway-api'
+    | '/payment'
+    | '/privacy-policy'
+    | '/terms-conditions'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PaymentsDocsRoute: typeof PaymentsDocsRoute
-  PaymentsGatewayApiRoute: typeof PaymentsGatewayApiRoute
-  PaymentsPaymentRoute: typeof PaymentsPaymentRoute
-  PaymentsPrivacyPolicyRoute: typeof PaymentsPrivacyPolicyRoute
-  PaymentsTermsConditionsRoute: typeof PaymentsTermsConditionsRoute
-  PaymentsIndexRoute: typeof PaymentsIndexRoute
+  DocsRoute: typeof DocsRoute
+  GatewayApiRoute: typeof GatewayApiRoute
+  PaymentRoute: typeof PaymentRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  TermsConditionsRoute: typeof TermsConditionsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PaymentsDocsRoute: PaymentsDocsRoute,
-  PaymentsGatewayApiRoute: PaymentsGatewayApiRoute,
-  PaymentsPaymentRoute: PaymentsPaymentRoute,
-  PaymentsPrivacyPolicyRoute: PaymentsPrivacyPolicyRoute,
-  PaymentsTermsConditionsRoute: PaymentsTermsConditionsRoute,
-  PaymentsIndexRoute: PaymentsIndexRoute,
+  DocsRoute: DocsRoute,
+  GatewayApiRoute: GatewayApiRoute,
+  PaymentRoute: PaymentRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  TermsConditionsRoute: TermsConditionsRoute,
 }
 
 export const routeTree = rootRoute
@@ -214,34 +192,30 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/payments/docs",
-        "/payments/gateway-api",
-        "/payments/payment",
-        "/payments/privacy-policy",
-        "/payments/terms-conditions",
-        "/payments/"
+        "/docs",
+        "/gateway-api",
+        "/payment",
+        "/privacy-policy",
+        "/terms-conditions"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/payments/docs": {
-      "filePath": "payments/docs.tsx"
+    "/docs": {
+      "filePath": "docs.tsx"
     },
-    "/payments/gateway-api": {
-      "filePath": "payments/gateway-api.tsx"
+    "/gateway-api": {
+      "filePath": "gateway-api.tsx"
     },
-    "/payments/payment": {
-      "filePath": "payments/payment.tsx"
+    "/payment": {
+      "filePath": "payment.tsx"
     },
-    "/payments/privacy-policy": {
-      "filePath": "payments/privacy-policy.tsx"
+    "/privacy-policy": {
+      "filePath": "privacy-policy.tsx"
     },
-    "/payments/terms-conditions": {
-      "filePath": "payments/terms-conditions.tsx"
-    },
-    "/payments/": {
-      "filePath": "payments/index.tsx"
+    "/terms-conditions": {
+      "filePath": "terms-conditions.tsx"
     }
   }
 }
