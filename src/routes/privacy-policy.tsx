@@ -1,3 +1,4 @@
+import Contacts from '@/components/contacts-simple'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/privacy-policy')({
@@ -161,15 +162,8 @@ function RouteComponent() {
           </p>
         </div>
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-          <p>
-            If you have any questions about this Privacy Policy, please contact us
-            <br />
-            Tel: +442037690016 <br />
-            Email: <a href="mailto:support@paytora.org" className="text-blue-600 hover:text-blue-800">support@paytora.org</a>
-          </p>
-        </div>
+        <Contacts/>
+
       </div>
     </div>
   )
