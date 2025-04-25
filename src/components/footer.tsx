@@ -120,7 +120,7 @@ const Footer = () => {
 						</motion.h3>
 						<p className="mt-2">MSB registration number: M22944776</p>
 						<p className="mt-2 ">
-							Licensed by Ebanx technology LYD incorporation number: 14055475
+							Licensed by Ebanx technology LTD incorporation number: 14055475
 						</p>
 					</motion.div>
 					<motion.div variants={item}>
