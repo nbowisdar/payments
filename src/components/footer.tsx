@@ -31,7 +31,7 @@ const Footer = () => {
 			variants={container}
 			className="bg-gray-900 text-white py-8 px-4 w-full text-sm mt-auto"
 		>
-			<div className="flex flex-wrap justify-evenly gap-10">
+			<div className="flex flex-wrap justify-evenly w-3/4 mx-auto">
 				<div>
 					<motion.div variants={item}>
 						<Link to="/">
@@ -72,8 +72,9 @@ const Footer = () => {
 						© 2024 CYB © GlobalPay
 					</motion.p>
 				</div>
-				<div className="flex flex-col gap-10 max-w-96">
-					{/* Contacts */}
+				<div className="flex flex-col gap-10 max-w-96">{/* Contacts */}</div>
+
+				<div className="flex flex-col gap-5 max-w-96">
 					<motion.div variants={item}>
 						<motion.h3
 							className="flex justify-between text-xl font-bold text-orange-400"
@@ -89,28 +90,6 @@ const Footer = () => {
 						</motion.h3>
 						<p className="mt-2">Admin@globalpayapp.net</p>
 					</motion.div>
-
-					{/* Location */}
-					<motion.div variants={item}>
-						<motion.h3
-							className="flex justify-between text-xl font-bold text-orange-400"
-							whileHover={{ x: 5 }}
-						>
-							Location
-							<motion.img
-								className="block w-6"
-								src="/img/map-icon.svg"
-								alt="Map icon"
-								whileHover={{ rotate: 10 }}
-							/>
-						</motion.h3>
-						<p className="mt-2">
-							20-22 WENLOCK ROAD,LONDON,,United Kingdom (the),N1 7GU
-						</p>
-					</motion.div>
-				</div>
-
-				<div className="flex flex-col gap-10 max-w-96">
 					<motion.div variants={item}>
 						<motion.h3
 							className="text-xl font-bold text-orange-400 "
@@ -119,13 +98,10 @@ const Footer = () => {
 							License
 						</motion.h3>
 						<p className="mt-2">MSB registration number: M22944776</p>
-						<p className="mt-2 ">
-							Licensed by Ebanx technology LTD incorporation number: 14055475
-						</p>
 					</motion.div>
 					<motion.div variants={item}>
 						<motion.h3
-							className="text-xl font-bold text-orange-400 mt-4 "
+							className="text-xl font-bold text-orange-400 "
 							whileHover={{ x: 5 }}
 						>
 							Documentation
