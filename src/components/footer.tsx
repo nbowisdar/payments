@@ -74,7 +74,7 @@ const Footer = () => {
 				</div>
 				<div className="flex flex-col gap-10 max-w-96">{/* Contacts */}</div>
 
-				<div className="flex flex-col gap-5 max-w-96">
+				<div className="flex flex-col gap-5 max-w-96 justify-center">
 					<motion.div variants={item}>
 						<motion.h3
 							className="flex justify-between text-xl font-bold text-orange-400"
@@ -90,15 +90,7 @@ const Footer = () => {
 						</motion.h3>
 						<p className="mt-2">Admin@globalpayapp.net</p>
 					</motion.div>
-					<motion.div variants={item}>
-						<motion.h3
-							className="text-xl font-bold text-orange-400 "
-							whileHover={{ x: 5 }}
-						>
-							License
-						</motion.h3>
-						<p className="mt-2">MSB registration number: M22944776</p>
-					</motion.div>
+
 					<motion.div variants={item}>
 						<motion.h3
 							className="text-xl font-bold text-orange-400 "
