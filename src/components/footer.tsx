@@ -29,7 +29,7 @@ const Footer = () => {
 			whileInView="visible"
 			viewport={{ once: true, margin: "-50px" }}
 			variants={container}
-			className="bg-gray-900 text-white py-8 px-4 w-full text-sm mt-auto"
+			className="bg-purple-950 text-white py-8 px-4 w-full text-sm mt-auto"
 		>
 			<div className="flex flex-wrap justify-evenly w-3/4 mx-auto">
 				<div>
@@ -37,7 +37,7 @@ const Footer = () => {
 						<Link to="/">
 							<motion.img
 								className="block"
-								src="/img/logo-bg.svg"
+								src="/img/logo-bg.png"
 								alt="Global Pay Logo"
 								width={200}
 								whileHover={{ scale: 1.05 }}
@@ -69,7 +69,7 @@ const Footer = () => {
 						viewport={{ once: true }}
 						transition={{ delay: 0.8 }}
 					>
-						© 2024 CYB © GlobalPay
+						© 2024 CYB © Mondex
 					</motion.p>
 				</div>
 				<div className="flex flex-col gap-10 max-w-96">{/* Contacts */}</div>
@@ -88,7 +88,7 @@ const Footer = () => {
 								whileHover={{ rotate: 10 }}
 							/>
 						</motion.h3>
-						<p className="mt-2">Admin@globalpayapp.net</p>
+						<p className="mt-2">Office@mondex.tech</p>
 					</motion.div>
 
 					<motion.div variants={item}>

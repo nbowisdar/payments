@@ -8,7 +8,7 @@ interface DefaultLayoutProps {
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
 	return (
-		<div className=" bg-gray-800 text-white">
+		<div className=" bg-purple-900 text-white">
 			{/* This container centers all content with max-width and padding */}
 			<div className="mx-auto ">
 				{/* This centers content vertically and horizontally */}

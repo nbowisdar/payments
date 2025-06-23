@@ -29,7 +29,7 @@ export const First = () => {
 				}}
 			>
 				<motion.img
-					src="/img/logo-bg.svg"
+					src="/img/logo-bg.png"
 					alt="Global Pay Logo"
 					className="block"
 					width={200}

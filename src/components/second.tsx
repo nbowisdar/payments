@@ -49,7 +49,7 @@ const Second = () => {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ once: true, margin: "-100px" }}
-			className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 w-full"
+			className="bg-purple-950 text-white py-16 px-4 sm:px-6 lg:px-8 w-full"
 		>
 			<div className="mx-auto w-3/4">
 				{/* Title */}
@@ -68,7 +68,7 @@ const Second = () => {
 						<motion.div
 							key={index}
 							whileHover={{ y: -5 }}
-							className="bg-gray-800 p-6 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500 max-w-[300px]"
+							className="bg-purple-900 p-6 rounded-lg shadow-md text-yellow-50 border-2 border-orange-500 max-w-[300px]"
 						>
 							<motion.img
 								src={item.image}

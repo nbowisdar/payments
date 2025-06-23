@@ -47,10 +47,10 @@ const Fifth = () => {
 						variants={itemVariants}
 						className="text-3xl md:text-4xl font-bold mb-2"
 					>
-						GLOBALPAY - Your Trusted Payment Gateway
+						Mondex - Your Trusted Payment Gateway
 					</motion.h1>
 					<motion.p variants={itemVariants} className="text-xl text-gray-300">
-						GLOBALPAY guarantees safe and secure online payments.
+						Mondex guarantees safe and secure online payments.
 					</motion.p>
 				</motion.div>
 
@@ -79,8 +79,8 @@ const Fifth = () => {
 							className="border-2 border-orange-500 rounded-lg p-6"
 						>
 							<p className="text-lg">
-								Welcome to Globalpay - the most promising and safest way to
-								process online payments.
+								Welcome to Mondex - the most promising and safest way to process
+								online payments.
 							</p>
 						</motion.div>
 					</motion.div>

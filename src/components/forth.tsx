@@ -105,7 +105,7 @@ export const Forth = () => {
 									stiffness: 100,
 								}}
 								whileHover={{ scale: 1.05 }}
-								className="border-2 border-orange-500 p-4 rounded-lg bg-gray-900 min-w-[200px] text-center"
+								className="border-2 border-orange-500 p-4 rounded-lg bg-purple-950 min-w-[200px] text-center"
 							>
 								<p className="text-xl mb-2 font-bold text-white">
 									{formatNumber(counts[index])}
