@@ -27,17 +27,7 @@ export const First = () => {
 					y: -5,
 					transition: { type: "spring", stiffness: 200 },
 				}}
-			>
-				<motion.img
-					src="/img/logo-bg.png"
-					alt="Global Pay Logo"
-					className="block"
-					width={200}
-					animate={{
-						y: [0, -5, 0],
-					}}
-				/>
-			</motion.div>
+			></motion.div>
 
 			{/* Payment Methods Slider */}
 			<motion.div

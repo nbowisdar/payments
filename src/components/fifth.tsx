@@ -33,7 +33,7 @@ const Fifth = () => {
 	}
 
 	return (
-		<main className="min-h-screen max-w-5/10 min-w-96 text-white m-auto">
+		<main className="min-h-screen max-w-5/10 min-w-96 text-zinc m-auto">
 			<div className="container mx-auto px-4 py-8">
 				{/* Header */}
 				<motion.div
@@ -49,7 +49,7 @@ const Fifth = () => {
 					>
 						Mondex - Your Trusted Payment Gateway
 					</motion.h1>
-					<motion.p variants={itemVariants} className="text-xl text-gray-300">
+					<motion.p variants={itemVariants} className="text-xl text-zinc-500">
 						Mondex guarantees safe and secure online payments.
 					</motion.p>
 				</motion.div>

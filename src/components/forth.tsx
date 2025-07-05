@@ -84,7 +84,7 @@ export const Forth = () => {
 				whileInView={{ y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
-				className="mt-8 pt-7 text-2xl font-bold text-center"
+				className="mt-8 pt-7 text-2xl font-bold text-center text-white"
 			>
 				Join millions getting secured payment
 			</motion.p>
@@ -105,13 +105,13 @@ export const Forth = () => {
 									stiffness: 100,
 								}}
 								whileHover={{ scale: 1.05 }}
-								className="border-2 border-orange-500 p-4 rounded-lg bg-purple-950 min-w-[200px] text-center"
+								className="border-2 border-orange-500 p-4 rounded-lg bg-zinc-50 min-w-[200px] text-center"
 							>
-								<p className="text-xl mb-2 font-bold text-white">
+								<p className="text-xl mb-2 font-bold text-zinc">
 									{formatNumber(counts[index])}
 									{item.afterNumber}
 								</p>
-								<p className="text-sm text-gray-300">{item.desc}</p>
+								<p className="text-sm text-zinc-500">{item.desc}</p>
 							</motion.div>
 						))}
 					</div>

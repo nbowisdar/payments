@@ -29,7 +29,7 @@ const Footer = () => {
 			whileInView="visible"
 			viewport={{ once: true, margin: "-50px" }}
 			variants={container}
-			className="bg-purple-950 text-white py-8 px-4 w-full text-sm mt-auto"
+			className="bg-zinc-50 text-zinc py-8 px-4 w-full text-sm mt-auto"
 		>
 			<div className="flex flex-wrap justify-evenly w-3/4 mx-auto">
 				<div>
@@ -37,7 +37,7 @@ const Footer = () => {
 						<Link to="/">
 							<motion.img
 								className="block"
-								src="/img/logo-bg.png"
+								src="/img/mondex.png"
 								alt="Global Pay Logo"
 								width={200}
 								whileHover={{ scale: 1.05 }}

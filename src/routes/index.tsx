@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router"
 import { Third } from "@/components/third"
 import Second from "@/components/second"
 import { First } from "@/components/first"
@@ -12,10 +12,16 @@ export const Route = createFileRoute("/")({
 function RouteComponent() {
 	return (
 		<div className="text-center w-full">
-			{/* <header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]"> */}
-			{/* </header> */}
 			<div>
 				<First />
+				<div className="flex justify-center">
+					<img
+						src="/img/mondex.png"
+						alt="Global Pay Logo"
+						className="block"
+						width={400}
+					/>
+				</div>
 				<Second />
 				<Third />
 				<Forth />
@@ -24,4 +30,3 @@ function RouteComponent() {
 		</div>
 	)
 }
-

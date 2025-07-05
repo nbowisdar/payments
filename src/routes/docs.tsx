@@ -62,7 +62,7 @@ function RouteComponent() {
 								href={url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block p-6  rounded-lg shadow-md hover:shadow-lg bg-purple-950  border-l-4 border-gray-500"
+								className="block p-6  rounded-lg shadow-md hover:shadow-lg bg-zinc-50  border-l-4 border-gray-500"
 							>
 								<h2 className="text-xl font-semibold ">{name}</h2>
 								<p className="text-blue-600 text-sm mt-1">{url}</p>
