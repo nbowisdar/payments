@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
+@theme inline {
+	--color-surface: var(--brand-surface);
+	--color-band: var(--brand-band);
+	--color-card: var(--brand-card);
+	--color-card-foreground: var(--brand-card-foreground);
+	--color-header: var(--brand-header);
+	--color-foreground: var(--brand-foreground);
+	--color-muted: var(--brand-muted);
+}
+
+/* gray-800 page, gray-900 bands, white text */
+.theme-dark {
+	--brand-surface: #1f2937;
+	--brand-band: #111827;
+	--brand-card: #1f2937;
+	--brand-card-foreground: #fefce8;
+	--brand-header: #1f2937;
+	--brand-foreground: #ffffff;
+	--brand-muted: #d1d5db;
+}
+
+/* zinc-50 page, sky-100 header, dark text */
+.theme-light {
+	--brand-surface: #fafafa;
+	--brand-band: #fafafa;
+	--brand-card: #fafafa;
+	--brand-card-foreground: #27272a;
+	--brand-header: #e0f2fe;
+	--brand-foreground: #27272a;
+	--brand-muted: #71717a;
+}
+
+.theme-light .site-header {
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
 body {
 	@apply m-0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,5 +50,3 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
-
-

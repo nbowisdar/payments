@@ -1,24 +1,15 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { motion } from 'framer-motion'
+import { brand, docLinks } from "@/brand"
+import { createFileRoute } from "@tanstack/react-router"
+import { motion } from "framer-motion"
 
-export const Route = createFileRoute('/docs')({
-  component: RouteComponent,
+export const Route = createFileRoute("/docs")({
+	component: RouteComponent,
 })
 
-const linkData = [
-	{
-		name: "Connecting Party Integration",
-		url: "https://doc.Mondexapp.net/integration/index.html",
-	},
-	{
-		name: "Merchant Manual",
-		url: "https://doc.Mondexapp.net/merchant/index.html",
-	},
-	{
-		name: "Manager Manual",
-		url: "https://doc.Mondexapp.net/manager/index.html",
-	},
-]
+const linkData = docLinks.map(({ name, path }) => ({
+	name,
+	url: `${brand.docsBase}${path}`,
+}))
 
 function RouteComponent() {
 	return (
@@ -32,11 +23,11 @@ function RouteComponent() {
 				{/* Header */}
 				<div className="mb-8">
 					<motion.h1
-						className="text-3xl font-bold text-gray-800 mb-2"
+						className="text-3xl font-bold text-foreground mb-2"
 						initial={{ y: -20 }}
 						animate={{ y: 0 }}
 					>
-						Mondex Documentation
+						{brand.sentenceName} Documentation
 					</motion.h1>
 					<motion.h3
 						className="text-xl "
@@ -62,7 +53,7 @@ function RouteComponent() {
 								href={url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block p-6  rounded-lg shadow-md hover:shadow-lg bg-zinc-50  border-l-4 border-gray-500"
+								className="block p-6 rounded-lg shadow-md hover:shadow-lg bg-band border-l-4 border-gray-500"
 							>
 								<h2 className="text-xl font-semibold ">{name}</h2>
 								<p className="text-blue-600 text-sm mt-1">{url}</p>

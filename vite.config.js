@@ -1,19 +1,21 @@
-import tailwindcss from "@tailwindcss/vite";
-import viteReact from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite"
+import viteReact from "@vitejs/plugin-react"
+import { defineConfig } from "vite"
 
-import { resolve } from "node:path";
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-
+import { resolve } from "node:path"
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite"
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
 	plugins: [
 		TanStackRouterVite({ autoCodeSplitting: true }),
 		viteReact(),
 		tailwindcss(),
 	],
 	base: "",
+	build: {
+		outDir: mode === "globalpay" || mode === "mondex" ? `dist/${mode}` : "dist",
+	},
 	test: {
 		globals: true,
 		environment: "jsdom",
@@ -23,4 +25,4 @@ export default defineConfig({
 			"@": resolve(__dirname, "./src"),
 		},
 	},
-});
+}))

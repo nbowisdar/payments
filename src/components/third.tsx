@@ -22,7 +22,7 @@ export const Third = () => {
 	}
 
 	return (
-		<div className="h-3/4 text-zinc text-2xl pt-5 pb-20">
+		<div className="h-3/4 text-foreground text-2xl pt-5 pb-20">
 			{/* Title */}
 			<motion.h1
 				initial={{ opacity: 0, y: -20 }}

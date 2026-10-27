@@ -55,7 +55,7 @@ export const Forth = () => {
 					if (newCounts[index] < item.targetNumber) {
 						newCounts[index] = Math.min(
 							item.targetNumber,
-							newCounts[index] + stepValue
+							newCounts[index] + stepValue,
 						)
 					}
 					return newCounts
@@ -105,13 +105,13 @@ export const Forth = () => {
 									stiffness: 100,
 								}}
 								whileHover={{ scale: 1.05 }}
-								className="border-2 border-orange-500 p-4 rounded-lg bg-zinc-50 min-w-[200px] text-center"
+								className="border-2 border-orange-500 p-4 rounded-lg bg-band min-w-[200px] text-center"
 							>
-								<p className="text-xl mb-2 font-bold text-zinc">
+								<p className="text-xl mb-2 font-bold text-foreground">
 									{formatNumber(counts[index])}
 									{item.afterNumber}
 								</p>
-								<p className="text-sm text-zinc-500">{item.desc}</p>
+								<p className="text-sm text-muted">{item.desc}</p>
 							</motion.div>
 						))}
 					</div>

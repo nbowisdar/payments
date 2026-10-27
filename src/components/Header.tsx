@@ -1,3 +1,4 @@
+import { brand } from "@/brand"
 import { Link } from "@tanstack/react-router"
 import { motion } from "framer-motion"
 import { useState } from "react"
@@ -13,14 +14,14 @@ const navLinks = [
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	return (
-		<header className="shadow-sm sticky top-0 z-50 bg-sky-100 rounded-b-2xl">
+		<header className="site-header shadow-sm sticky top-0 z-50 bg-header">
 			<div className="px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center h-16 justify-between gap-15">
 					{/* Logo */}
 					<div className="">
 						<motion.div whileHover={{ scale: 1.05 }} className="">
 							<Link to="/" className="text-xl font-bold">
-								Mondex
+								{brand.name}
 							</Link>
 						</motion.div>
 					</div>
@@ -80,7 +81,7 @@ const Header = () => {
 							<Link
 								key={item.name}
 								to={item.link}
-								className="block pl-3 pr-4 py-2 border-l-4 border-orange-500 bg-zinc-50 text-base font-medium"
+								className="block pl-3 pr-4 py-2 border-l-4 border-orange-500 bg-band text-base font-medium"
 							>
 								{item.name}
 							</Link>

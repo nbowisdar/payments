@@ -1,3 +1,4 @@
+import { brand } from "@/brand"
 import { Link } from "@tanstack/react-router"
 import { motion } from "framer-motion"
 
@@ -29,7 +30,7 @@ const Footer = () => {
 			whileInView="visible"
 			viewport={{ once: true, margin: "-50px" }}
 			variants={container}
-			className="bg-zinc-50 text-zinc py-8 px-4 w-full text-sm mt-auto"
+			className="bg-band text-foreground py-8 px-4 w-full text-sm mt-auto"
 		>
 			<div className="flex flex-wrap justify-evenly w-3/4 mx-auto">
 				<div>
@@ -37,8 +38,8 @@ const Footer = () => {
 						<Link to="/">
 							<motion.img
 								className="block"
-								src="/img/mondex.png"
-								alt="Global Pay Logo"
+								src={brand.logo}
+								alt={brand.logoAlt}
 								width={200}
 								whileHover={{ scale: 1.05 }}
 							/>
@@ -69,7 +70,7 @@ const Footer = () => {
 						viewport={{ once: true }}
 						transition={{ delay: 0.8 }}
 					>
-						© 2024 CYB © Mondex
+						© 2024 CYB © {brand.name}
 					</motion.p>
 				</div>
 				<div className="flex flex-col gap-10 max-w-96">{/* Contacts */}</div>
@@ -88,7 +89,7 @@ const Footer = () => {
 								whileHover={{ rotate: 10 }}
 							/>
 						</motion.h3>
-						<p className="mt-2">Office@mondex.tech</p>
+						<p className="mt-2">{brand.email}</p>
 					</motion.div>
 
 					<motion.div variants={item}>

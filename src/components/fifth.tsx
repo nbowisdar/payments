@@ -1,3 +1,4 @@
+import { brand } from "@/brand"
 import { motion } from "framer-motion"
 
 const Fifth = () => {
@@ -33,7 +34,7 @@ const Fifth = () => {
 	}
 
 	return (
-		<main className="min-h-screen max-w-5/10 min-w-96 text-zinc m-auto">
+		<main className="min-h-screen max-w-5/10 min-w-96 text-foreground m-auto">
 			<div className="container mx-auto px-4 py-8">
 				{/* Header */}
 				<motion.div
@@ -47,10 +48,10 @@ const Fifth = () => {
 						variants={itemVariants}
 						className="text-3xl md:text-4xl font-bold mb-2"
 					>
-						Mondex - Your Trusted Payment Gateway
+						{brand.headline} - Your Trusted Payment Gateway
 					</motion.h1>
-					<motion.p variants={itemVariants} className="text-xl text-zinc-500">
-						Mondex guarantees safe and secure online payments.
+					<motion.p variants={itemVariants} className="text-xl text-muted">
+						{brand.headline} guarantees safe and secure online payments.
 					</motion.p>
 				</motion.div>
 
@@ -79,8 +80,8 @@ const Fifth = () => {
 							className="border-2 border-orange-500 rounded-lg p-6"
 						>
 							<p className="text-lg">
-								Welcome to Mondex - the most promising and safest way to process
-								online payments.
+								Welcome to {brand.sentenceName} - the most promising and safest
+								way to process online payments.
 							</p>
 						</motion.div>
 					</motion.div>

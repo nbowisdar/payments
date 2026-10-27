@@ -1,3 +1,4 @@
+import { brand } from "@/brand"
 import { motion } from "framer-motion"
 import PaymentMethodsSlider from "./payments-icons"
 
@@ -27,7 +28,19 @@ export const First = () => {
 					y: -5,
 					transition: { type: "spring", stiffness: 200 },
 				}}
-			></motion.div>
+			>
+				{brand.showHeroLogo ? (
+					<motion.img
+						src={brand.logo}
+						alt={brand.logoAlt}
+						className="block"
+						width={brand.homeLogoWidth}
+						animate={{
+							y: [0, -5, 0],
+						}}
+					/>
+				) : null}
+			</motion.div>
 
 			{/* Payment Methods Slider */}
 			<motion.div

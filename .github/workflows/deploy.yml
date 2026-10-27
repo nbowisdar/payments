@@ -1,0 +1,44 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+
+      - name: Install and build both sites
+        run: |
+          bun install --frozen-lockfile
+          bun run build
+
+      - name: Upload both sites
+        env:
+          DROPLET_HOST: ${{ secrets.DROPLET_HOST }}
+          DROPLET_USER: ${{ secrets.DROPLET_USER }}
+          DROPLET_SSH_KEY: ${{ secrets.DROPLET_SSH_KEY }}
+        run: |
+          if [ -z "$DROPLET_HOST" ] || [ -z "$DROPLET_USER" ] || [ -z "$DROPLET_SSH_KEY" ]; then
+            echo "Missing DROPLET_HOST, DROPLET_USER, or DROPLET_SSH_KEY."
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DROPLET_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DROPLET_HOST" >> ~/.ssh/known_hosts
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
+            dist/globalpay/ "${DROPLET_USER}@${DROPLET_HOST}:/var/www/globalpayapp/"
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
+            dist/mondex/ "${DROPLET_USER}@${DROPLET_HOST}:/var/www/mondex/"

@@ -1,5 +1,6 @@
-import Footer from "@/components/footer"
+import { brand } from "@/brand"
 import Header from "@/components/Header"
+import Footer from "@/components/footer"
 import type { ReactNode } from "react"
 
 interface DefaultLayoutProps {
@@ -8,7 +9,7 @@ interface DefaultLayoutProps {
 
 const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
 	return (
-		<div className=" bg-zinc-50 text-zinc">
+		<div className={`theme-${brand.theme} bg-surface text-foreground`}>
 			{/* This container centers all content with max-width and padding */}
 			<div className="mx-auto ">
 				{/* This centers content vertically and horizontally */}

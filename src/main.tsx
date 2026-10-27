@@ -1,7 +1,4 @@
-import {
-	RouterProvider,
-	createRouter,
-} from "@tanstack/react-router"
+import { RouterProvider, createRouter } from "@tanstack/react-router"
 import { StrictMode } from "react"
 import ReactDOM from "react-dom/client"
 
@@ -9,7 +6,11 @@ import ReactDOM from "react-dom/client"
 import { routeTree } from "./routeTree.gen"
 
 import "./styles.css"
+import { brand } from "./brand.ts"
 import reportWebVitals from "./reportWebVitals.ts"
+
+document.documentElement.classList.add(`theme-${brand.theme}`)
+document.title = brand.name
 
 // Create a new router instance
 const router = createRouter({
@@ -20,7 +21,6 @@ const router = createRouter({
 	defaultStructuralSharing: true,
 	defaultPreloadStaleTime: 0,
 })
-
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
@@ -36,7 +36,7 @@ if (rootElement && !rootElement.innerHTML) {
 	root.render(
 		<StrictMode>
 			<RouterProvider router={router} />
-		</StrictMode>
+		</StrictMode>,
 	)
 }
 

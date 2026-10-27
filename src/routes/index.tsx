@@ -1,9 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { Third } from "@/components/third"
-import Second from "@/components/second"
+import { brand } from "@/brand"
+import Fifth from "@/components/fifth"
 import { First } from "@/components/first"
 import { Forth } from "@/components/forth"
-import Fifth from "@/components/fifth"
+import Second from "@/components/second"
+import { Third } from "@/components/third"
+import { createFileRoute } from "@tanstack/react-router"
 
 export const Route = createFileRoute("/")({
 	component: RouteComponent,
@@ -14,14 +15,16 @@ function RouteComponent() {
 		<div className="text-center w-full">
 			<div>
 				<First />
-				<div className="flex justify-center">
-					<img
-						src="/img/mondex.png"
-						alt="Global Pay Logo"
-						className="block"
-						width={400}
-					/>
-				</div>
+				{brand.showHeroLogo ? null : (
+					<div className="flex justify-center">
+						<img
+							src={brand.logo}
+							alt={brand.logoAlt}
+							className="block"
+							width={brand.homeLogoWidth}
+						/>
+					</div>
+				)}
 				<Second />
 				<Third />
 				<Forth />
